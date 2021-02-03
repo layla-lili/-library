@@ -1,25 +1,32 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Members from "./components/Members";
+import AddMember from "./components/AddMember";
+import { useState } from "react";
+
+
 
 function App() {
+  const [state,setState]=useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  <div className="container">
+    <div className="jumbotron mt-3 text-center">
+      <div className="row align-center mb-2">
+        <div className="col-4">
+          <h3 className="text">Add member:</h3>
+        </div>
+      </div>
+      <AddMember />
     </div>
+    <Members />
+  </div>
+
   );
 }
 
 export default App;
+
+
+
+
