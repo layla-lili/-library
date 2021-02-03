@@ -1,17 +1,19 @@
 
 
 import Memebership from "./Membership";
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux'
+
 
 const Members = () => {
   const member = useSelector((state) => state.member);
-  const list = member.map((person) => (
+  
+  const list =  member.map((member) => (
     <Memebership key={member.id} member={member} />
   ));
   return <div className="row my-5">{list}</div>;
 };
 
-export default Memebership;
+export default Members;
 
 
 

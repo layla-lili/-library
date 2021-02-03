@@ -1,9 +1,9 @@
 const ADD_MEMBER = "ADD_MEMBER";
 
-export const addMember = (newMamber) => {
+export const addMember = (member) => {
  
   return {
     type: ADD_MEMBER,
-    payload: { newMamber }, // {newMamber: newMamber}
+    payload: { member }, // {newMamber: newMamber}
   };
 };

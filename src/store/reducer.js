@@ -1,7 +1,7 @@
-import members from "../members";
+import member from "../members";
 
 const initialState = {
-  members: members,
+  member: member,
 };
 
 const reducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
     case "ADD_MEMBER":
       return {
         ...state,
-        member: [...state.member, action.payload.newMember],
+        member: [...state.member, action.payload.member],
       };
     default:
       return state;

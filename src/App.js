@@ -2,12 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import Members from "./components/Members";
 import AddMember from "./components/AddMember";
-import { useState } from "react";
+
 
 
 
 function App() {
-  const [state,setState]=useState("");
+
   return (
 
   <div className="container">
@@ -17,9 +17,10 @@ function App() {
           <h3 className="text">Add member:</h3>
         </div>
       </div>
-      <AddMember />
+      <Members />
+     
     </div>
-    <Members />
+    <AddMember />
   </div>
 
   );

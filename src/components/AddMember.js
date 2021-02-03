@@ -2,7 +2,7 @@ import { addMember } from "../store/actions";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
-const ControlledForm = () => {
+const AddMember = () => {
   const dispatch = useDispatch();
   const [member, setMember] = useState({
     firstName: "",
@@ -14,7 +14,7 @@ currentlyBorrowedBooks:[]
   });
 
   const handleChange = (event) =>
-    setMember({ ...member, [event.target.firstName]: event.target.value });
+    setMember({ ...member, [event.target.name]: event.target.value });
 
   const resetForm = () =>
     setMember({
@@ -35,7 +35,7 @@ currentlyBorrowedBooks:[]
     <form onSubmit={handleSubmit}>
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <span className="btn btn-outline-info ">Lirst Name*</span>
+          <span className="btn btn-outline-info ">Last Name*</span>
         </div>
         <input
           required
@@ -53,7 +53,7 @@ currentlyBorrowedBooks:[]
         <input
           className="form-control"
           type="text"
-          name="description"
+          name="lastName"
           value={member.lastName}
           onChange={handleChange}
         />
@@ -64,7 +64,7 @@ currentlyBorrowedBooks:[]
         </div>
         <input
           className="form-control"
-          type="number"
+          type="text"
           name="id"
           value={member.id}
           onChange={handleChange}
@@ -88,8 +88,8 @@ currentlyBorrowedBooks:[]
         </div>
         <input
           className="form-control"
-          type="number"
-          name="id"
+          type="text"
+          name="membership"
           value={member.membership}
           onChange={handleChange}
         />
@@ -100,8 +100,8 @@ currentlyBorrowedBooks:[]
         </div>
         <input
           className="form-control"
-          type="number"
-          name="id"
+          type="text"
+          name="currentlyBorrowedBooks"
           value={member.currentlyBorrowedBooks}
           onChange={handleChange}
         />
@@ -113,4 +113,4 @@ currentlyBorrowedBooks:[]
   );
 };
 
-export default ControlledForm;
+export default AddMember;
