@@ -1,35 +1,37 @@
-import { addMember } from "../store/actions";
+import { addBook } from "../store/actions";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
-const AddMember = () => {
+const AddBook = () => {
   const dispatch = useDispatch();
-  const [member, setMember] = useState({
-    firstName: "",
-    lastName: "",
-    slug: "",
-    id: "",
-    membership: "",
-    currentlyBorrowedBooks: [],
+  const [book, setBook] = useState({
+    author: "",
+    title: "",
+    genre: [],
+    available: "",
+    borrowedBy: [],
   });
 
   const handleChange = (event) =>
-    setMember({
-      ...member,
+    setBook({
+      ...book,
       [event.target.name]: event.target.value,
       [event.target.id]: event.target.value,
     });
 
   const resetForm = () =>
-    setMember({
-      firstName: "",
-      lastName: "",
-      membership: "",
+    setBook({
+      title: "",
+      author: "",
+
+      genre: [],
+      available: "",
+      borrowedBy: [],
     });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addMember(member));
+    dispatch(addBook(book));
     resetForm();
   };
 
@@ -37,58 +39,59 @@ const AddMember = () => {
     <form onSubmit={handleSubmit}>
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <span className="btn btn-outline-info "> First Name*</span>
+          <span className="btn btn-outline-info">Title*</span>
         </div>
         <input
-          required
           className="form-control"
           type="text"
-          name="firstName"
-          value={member.firstName}
+          name="title"
+          value={book.title}
           onChange={handleChange}
         />
       </div>
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <span className="btn btn-outline-info">Last Name*</span>
+          <span className="btn btn-outline-info">Author*</span>
         </div>
         <input
           className="form-control"
           type="text"
-          name="lastName"
-          value={member.lastName}
+          name="author"
+          value={book.author}
           onChange={handleChange}
         />
       </div>
 
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <span className="btn btn-outline-info">membership*</span>
+          <span className="btn btn-outline-info">Genre *</span>
         </div>
         <input
           className="form-control"
           type="text"
-          name="membership"
-          value={member.membership}
+          name="genre"
+          value={book.genre}
           onChange={handleChange}
         />
       </div>
 
-      <select onChange={handleChange} id="membership">
-        <option value="gold">gold</option>
-        <option value="silver">silver</option>
-        <option value="platinum">platinum</option>
-      </select>
+      <div>
+        <select onChange={handleChange} id="available">
+          <option value="true">available</option>
+          <option value="false">not available</option>
+        </select>
+      </div>
+      <br />
 
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <span className="btn btn-outline-info">currentlyBorrowedBooks*</span>
+          <span className="btn btn-outline-info">borrowedBy*</span>
         </div>
         <input
           className="form-control"
           type="text"
-          name="currentlyBorrowedBooks"
-          value={member.currentlyBorrowedBooks}
+          name="borrowedBy"
+          value={book.borrowedBy}
           onChange={handleChange}
         />
       </div>
@@ -99,4 +102,4 @@ const AddMember = () => {
   );
 };
 
-export default AddMember;
+export default AddBook;
