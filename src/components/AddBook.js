@@ -76,6 +76,7 @@ const AddBook = () => {
       </div>
 
       <div>
+      <span className="btn btn-outline-info">Book available*</span>
         <select onChange={handleChange} id="available">
           <option value="true">available</option>
           <option value="false">not available</option>

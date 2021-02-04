@@ -6,10 +6,10 @@ const MemberList = (props) => {
   const [query, setQuery] = useState("");
   const booklist = props.book
     .filter(
-      (book) => book.title.toLowerCase().includes(query.toLowerCase())
+      (book) => book.title.toLowerCase().includes(query.toLowerCase() )
       //genre.toLowerCase().includes(query.toLowerCase())
     )
-    // .filter((book) => genre.toLowerCase().includes(query.toLowerCase()))
+    // .map((genre) => genre.toLowerCase().includes(query.toLowerCase()))
     .map((book) => <ViewBooks book={book} key={book.id} />);
 
   return (

@@ -61,19 +61,8 @@ const AddMember = () => {
         />
       </div>
 
-      <div className="input-group mb-3">
-        <div className="input-group-prepend">
-          <span className="btn btn-outline-info">membership*</span>
-        </div>
-        <input
-          className="form-control"
-          type="text"
-          name="membership"
-          value={member.membership}
-          onChange={handleChange}
-        />
-      </div>
-
+    
+      <span className="btn btn-outline-info">Memebrship*</span>
       <select onChange={handleChange} id="membership">
         <option value="gold">gold</option>
         <option value="silver">silver</option>

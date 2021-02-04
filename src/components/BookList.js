@@ -5,8 +5,8 @@ const BookList = ({ book }) => (
     <div>
       <div>
         <h3>{book.author} </h3>
-
-        <Link to={`/book/${book.slug}`}>
+      
+        <Link to={`book/${book.slug}`}>
           <img src={book.image} alt={book.title} width="100" height="200" />
         </Link>
 

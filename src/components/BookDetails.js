@@ -9,12 +9,12 @@ const BookDetails = (props) => {
   return (
     <div>
       <DetailWrapper className="text-left">
-        <p>Title :{book.title}</p>
-        <p>Author: {book.author}</p>
-        <img src={book.image} alt={book.title} />
-        <p> Book genre:{book.genre}</p>
-        <p>Book Available {book.available ? "available" : "not available"}</p>
-        <p>Borrowed By {book.borrowedBy} </p>
+        <p>Title :{props.book.title}</p>
+        <p>Author: {props.book.author}</p>
+        <img src={props.book.image} alt={props.book.title} />
+        <p> Book genre:{props.book.genre}</p>
+        <p>Book Available {props.book.available ? "available" : "not available"}</p>
+        <p>Borrowed By {props.book.borrowedBy} </p>
       </DetailWrapper>
     </div>
   );
