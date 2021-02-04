@@ -7,6 +7,8 @@ const books = [
     genre: ["Self-Help"],
     available: false,
     borrowedBy: [3],
+    image:
+      "https://images-na.ssl-images-amazon.com/images/I/41kspFBwVxL._SX331_BO1,204,203,200_.jpg",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const books = [
     genre: ["Sci-Fi", "Thriller"],
     available: false,
     borrowedBy: [3],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1472119680l/27833670._SY475_.jpg",
   },
   {
     id: 3,
@@ -25,6 +29,7 @@ const books = [
     genre: ["Suspense", "Fantasy"],
     available: false,
     borrowedBy: [1, 3, 5, 1],
+    image: "https://images-na.ssl-images-amazon.com/images/I/71UhnbUOwzL.jpg",
   },
   {
     id: 4,
@@ -34,6 +39,7 @@ const books = [
     genre: ["Biography"],
     available: true,
     borrowedBy: [2, 5],
+    image: "https://images-na.ssl-images-amazon.com/images/I/91iZ2ZQduBL.jpg",
   },
   {
     id: 5,
@@ -43,6 +49,7 @@ const books = [
     genre: ["Business", "Entrepreneurship"],
     available: false,
     borrowedBy: [4, 1, 2],
+    image: "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg",
   },
   {
     id: 6,
@@ -52,6 +59,7 @@ const books = [
     genre: ["Fantasy"],
     available: true,
     borrowedBy: [],
+    image: "https://images-na.ssl-images-amazon.com/images/I/91PUHDK0JAL.jpg",
   },
   {
     id: 7,
@@ -61,6 +69,8 @@ const books = [
     genre: ["Fantasy"],
     available: false,
     borrowedBy: [4, 3, 2, 1, 5],
+    image:
+      "https://target.scene7.com/is/image/Target/GUEST_9ca6a484-4fea-47ba-9452-792de0083d55?wid=488&hei=488&fmt=pjpeg",
   },
   {
     id: 8,
@@ -70,6 +80,7 @@ const books = [
     genre: ["Crime", "Mystery"],
     available: false,
     borrowedBy: [3, 5],
+    image: "https://images-na.ssl-images-amazon.com/images/I/813H-43Z8-L.jpg",
   },
   {
     id: 9,
@@ -79,6 +90,7 @@ const books = [
     genre: ["Fiction"],
     available: false,
     borrowedBy: [5, 1],
+    image: "https://miro.medium.com/max/700/1*XqHIC1QN8VCEcBaHdtWvxg.jpeg",
   },
   {
     id: 10,
@@ -88,6 +100,8 @@ const books = [
     genre: ["Fantasy"],
     available: false,
     borrowedBy: [5],
+    image:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1491842507l/34076952.jpg",
   },
 ];
 
